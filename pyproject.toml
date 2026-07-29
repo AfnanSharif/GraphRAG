@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "marketmesh-knowledge-graph"
+version = "1.0.0"
+description = "Offline graph-augmented retrieval with optional LlamaIndex and Neo4j"
+requires-python = ">=3.10"
+dependencies = ["streamlit>=1.40,<2", "python-dotenv>=1.0,<2"]
+
+[project.scripts]
+marketmesh = "market_knowledge_graph.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
